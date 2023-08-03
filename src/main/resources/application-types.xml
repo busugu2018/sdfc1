@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="Account" format="json">
+      <types:shape format="weave" example="examples/quickJsonRecord.json"><![CDATA[%dw 2.0
+
+type Account = Array<{|  name: String,   billingAddress: String,   billingCity: String,   billingCountry: String,   billingState: String,   billingPostalCode: String|}> {"example": "[{\\\"name\\\":\\\"Jo Ken\\\",\\\"billingAddress\\\":\\\"234 stater Rd\\\",\\\"billingCity\\\":\\\"Dallas\\\",\\\"billingCountry\\\":\\\"USA\\\",\\\"billingState\\\":\\\"TX\\\",\\\"billingPostalCode\\\":\\\"75283\\\"},{\\\"name\\\":\\\"Kojo Mann\\\",\\\"billingAddress\\\":\\\"2394 Forest Rd\\\",\\\"billingCity\\\":\\\"Dallas\\\",\\\"billingCountry\\\":\\\"USA\\\",\\\"billingState\\\":\\\"TX\\\",\\\"billingPostalCode\\\":\\\"75287\\\"},{\\\"name\\\":\\\"Leonnel Milla\\\",\\\"billingAddress\\\":\\\"8384 Reeder Rd\\\",\\\"billingCity\\\":\\\"Dallas\\\",\\\"billingCountry\\\":\\\"USA\\\",\\\"billingState\\\":\\\"TX\\\",\\\"billingPostalCode\\\":\\\"75228\\\"}]"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#8667ada3-5763-4ebe-a508-c45f020e3ace">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="Account"/>
+        </types:message>
+      </types:input-event>
+      <types:output-event>
+        <types:message>
+          <types:payload type="Account"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>

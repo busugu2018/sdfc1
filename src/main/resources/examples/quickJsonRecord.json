@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Jo Ken",
+		"billingAddress": "234 stater Rd",
+		"billingCity": "Dallas",
+		"billingCountry": "USA",
+		"billingState": "TX",
+		"billingPostalCode": "75283"
+	},
+	{
+		"name": "Kojo Mann",
+		"billingAddress": "2394 Forest Rd",
+		"billingCity": "Dallas",
+		"billingCountry": "USA",
+		"billingState": "TX",
+		"billingPostalCode": "75287"		
+	},
+	{
+		"name": "Leonnel Milla",
+		"billingAddress": "8384 Reeder Rd",
+		"billingCity": "Dallas",
+		"billingCountry": "USA",
+		"billingState": "TX",
+		"billingPostalCode": "75228"		
+	}
+]
